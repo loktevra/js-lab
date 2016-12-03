@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>canvas random test</title>
+<style type="text/css">
+	body {
+		margin: 0px;
+		overflow:  hidden;
+		height: 100vh;
+		width: 100vw;
+	}
+</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script type="text/javascript">
+	var canvas = document.getElementById("canvas");
+	var context = canvas.getContext("2d");
+	canvas.width=document.body.clientWidth;
+    canvas.height=document.body.clientHeight;
+	for (var y = canvas.height - 1; y >= 0; y--) {
+		for (var x = canvas.width - 1; x >= 0; x--) {
+			if(Math.round(Math.random())==1){
+				context.fillRect(x, y, 1, 1);
+			}
+		};
+	};
+</script>
+</body>
