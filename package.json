@@ -9,8 +9,12 @@
   "scripts": {
     "test": "jest",
     "start": "webpack-dev-server --open --mode development",
-    "build": "rm -rf docs && webpack -p",
-    "prepush": "npm run build && git add docs && git commit -m 'make docs'"
+    "build": "rm -rf docs && webpack -p"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run build && git add docs && git commit -m 'make docs'"
+    }
   },
   "repository": {
     "type": "git",
