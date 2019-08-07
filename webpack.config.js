@@ -28,9 +28,13 @@ const baseConfig = {
             loader: 'style-loader'
           },
           {
+            loader: "css-modules-typescript-loader",
+          },
+          {
             loader: 'css-loader',
             options: {
-              sourceMap: true
+              sourceMap: true,
+              modules: true,
             }
           },
           {
@@ -54,7 +58,7 @@ const baseConfig = {
     ]
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ]
+    extensions: [ '.tsx', '.ts', '.js', '.scss' ]
   },
   plugins: [
     new HtmlWebPackPlugin({
