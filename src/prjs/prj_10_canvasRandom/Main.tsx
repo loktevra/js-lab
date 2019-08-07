@@ -16,11 +16,6 @@ class Main extends React.Component {
     }
     render(){
         const style = {
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
             height: '100vh',
             width: '100wh',
         }

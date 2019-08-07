@@ -63,7 +63,7 @@ const baseConfig = {
   plugins: [
     new HtmlWebPackPlugin({
       filename: "index.html",
-      title: '2048',
+      title: 'TS lab',
       meta: {
         viewport: 'width=device-width, initial-scale=1',
       },
